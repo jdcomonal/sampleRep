@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <script>
+
+    //declaration of variables
+    let numOne = '';
+    let numTwo = '';
+
+
+    function inputValues1(){
+    numOne = prompt('Enter 1st number'); 
+    return numOne;
+    }
+   
+    function inputValues2(){
+    numTwo = prompt('Enter 2nd number');
+    return numTwo;
+    }
+
+    let sum = 0;
+    let mul = 0;
+    let divi = 0;
+    let subs = 0;
+   
+    numOne = inputValues1();
+    numTwo = inputValues2();
+
+    if (Number.isInteger( parseInt(numOne) ) == false) {
+        alert('Invalid Input for Number 1');
+        numOne = inputValues1();
+    }
+
+    if (Number.isInteger( parseInt(numTwo) ) == false) {
+        alert('Invalid Input for Number 2');
+        numTwo = inputValues2();
+    }
+    
+    //operation
+    sum = parseInt(numOne) + parseInt(numTwo);
+    mul = parseInt(numOne) * parseInt(numTwo);
+    divi = parseInt(numOne) / parseInt(numTwo);
+    subs = parseInt(numOne) - parseInt(numTwo);
+    
+    //sum = 'Hello World'; 
+
+    //output
+    document.write('the sum of ' + numOne +  ' and ' + numTwo + ' is: ' + sum + '<br />');
+    document.write('the product of ' + numOne +  ' and ' + numTwo + ' is: ' + mul+ '<br />');
+    document.write('the division of ' + numOne +  ' and ' + numTwo + ' is: ' + divi+ '<br />');
+    document.write('the subsctraction of ' + numOne +  ' and ' + numTwo + ' is: ' + subs+ '<br />');
+    
+
+   </script>
+
+</body>
+</html>
